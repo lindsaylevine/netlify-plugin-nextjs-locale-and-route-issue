@@ -15,22 +15,39 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Hello i18n world
-        </h1>
-
-        <p className={styles.description}>
-          <Link href="/" locale="en">
-            <a>EN</a>
-          </Link>
-
-          |
-
-          <Link href="/" locale="fr">
-            <a>FR</a>
-          </Link>
+      <main>
+        <p>
+          To spot the issue:
         </p>
+
+        <ul>
+          <li>
+            Open the dev tools
+          </li>
+          <li>
+            Refresh the page
+          </li>
+          <li>
+            In the Network tab, spot the access to the worker.
+            For example <code>/_next/static/worker/ff2b3b2479e7a9fbaea2244ed1875dfa.js</code>
+          </li>
+          <li>
+            Open this URL in a new tab
+          </li>
+          <li>
+            Insert <code>/fr</code> at the beginning of the path.
+            For example, <code>/fr/_next/static/worker/ff2b3b2479e7a9fbaea2244ed1875dfa.js</code>
+          </li>
+        </ul>
+
+        <p>
+          Does this new, locale-prefixed URL works?
+        </p>
+
+        <ul>
+          <li>With <code>npm run build / npm run start</code>, it does</li>
+          <li>On Netlify, it doesn&apos;t</li>
+        </ul>
 
         <PdfViewer />
       </main>
