@@ -1,5 +1,5 @@
 module.exports = {
-  target: "serverless",
+  target: "experimental-serverless-trace",
   reactStrictMode: true,
   i18n: {
     locales: ['en', 'fr'],
