@@ -2,7 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/Link'
+
 import styles from '../styles/Home.module.css'
+import PdfViewer from '../src/PdfViewer'
 
 export default function Home() {
   return (
@@ -29,6 +31,8 @@ export default function Home() {
             <a>FR</a>
           </Link>
         </p>
+
+        <PdfViewer />
       </main>
     </div>
   )
